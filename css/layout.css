@@ -1,0 +1,177 @@
+/* 와이드 pc  */
+
+article { overflow: hidden; }
+.main { width: 100%; height:900px; background: url(../images/index/main.jpg) center fixed no-repeat;
+		background-size:cover; position:relative; }
+.main div { width: 100%; height:100%; text-indent:-999px; overflow:hidden; position:absolute; }
+.main div:nth-of-type(1) { background:url(../images/index/title1_1.png) center 0 no-repeat; z-index:10; }
+.main div:nth-of-type(2) { background:url(../images/index/logo_img.png) center 0 fixed no-repeat; z-index: 20; }				
+.main div:nth-of-type(3) { background:url(../images/index/title2_1.png) center 0 no-repeat; z-index:30; }
+					
+.movie { width: 100%; height: 615px; overflow:hidden;}
+.movie #videoBG {
+   width:auto;
+   min-width:100%; 
+   height:auto;
+   min-height:615px; 
+  
+}
+
+.movie #imgBG{
+	height:197px;
+	background: url(../images/index/rewards.png) 7% 0 no-repeat;
+	display:none;
+	position:relative;
+}
+.movie #imgBG ul { overflow:hidden; position:absolute; right:10%; top:86.5px; }
+.movie #imgBG li { float:left; line-height: 2.083em; }
+.movie #imgBG li:first-child { margin-right: 30px; }
+.movie #imgBG li a { font-size: 2.083em; color: #fff; text-shadow: 3px 3px 2px #333;}
+
+.roast { width: 100%; height: 564px; background: url(../images/index/roast_img.png) center fixed no-repeat;
+		background-size:cover; overflow:hidden; position:relative; }
+.roast div {  width:348px; text-align:center; margin:118px 0 0 15%; overflow: hidden; }		
+.roast h3 { color: #eee; text-shadow: 3px 3px 2px #333; font-size: 2.083em; margin-bottom: 30px;}
+.roast p {  color:#fff;   font-size: 1.666em;}
+.roast img { position:absolute; top:70%; right: 5%; animation: circle 6s linear infinite;}
+
+@keyframes circle {
+  from { transform: rotate(0deg)
+                    translate(-10px)
+                    rotate(0deg);
+  }
+  to {   transform: rotate(360deg)
+                    translate(-10px) 
+                    rotate(-360deg);
+  }
+}
+
+.contents { width: 1200px; padding-top: 70px; margin: 0 auto; overflow:hidden;}
+.contents ul { margin: 0 35px; }
+.contents li { float: left; position: relative; transition:all .6s}
+.contents li a { display: block; width:100%; height:100%}
+.contents li a span { display:block; }
+.contents li a.imgs { overflow:hidden; }
+.contents li a.imgs span { opacity: 0; font-size: 2.083em; color:#fff; position:absolute; top:50%; left:50%; transition:all 1s; }/*이미지있는 a태그의 span */
+.contents li:hover a.imgs {
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.25) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: radial-gradient(ellipse at center,  rgba(0,0,0,0.25) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40000000', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.contents li:hover a.imgs span { opacity: 1; }
+.contents .bean { width: 40%; height:310px; background: url(../images/index/bean.jpg) center no-repeat; }
+.contents .bean a.imgs span { margin-left:-60px; }
+.contents .brew { width: 35%; height:310px; background: url(../images/index/brew.jpg) center no-repeat; }
+.contents .brew a.imgs span { margin-left:-123px; }
+.contents .coffee { width: 25%; height:310px;}
+.contents .coffee span{ font-size: 6.25em; color:#fff; line-height:0.89em; padding: 23px 15px 0 15px;}
+.contents .coffee a { transition: all 0.3s; }
+.contents .coffee a:hover { text-shadow: 3px 3px 5px #666; }
+.contents .mobile { width: 20%; height:400px; }
+.contents .mobile span { font-size: 6.25em; color:#fff; line-height:0.89em; padding: 68px 10px 0 10px;}
+.contents .mobile a.horizontal { display: none; }
+.contents .mobile a { transition: all 0.3s; }
+.contents .mobile a:hover { text-shadow: 3px 3px 5px #666; }
+.contents .store { width: 55%; height:400px; background: url(../images/index/store.jpg) center no-repeat; }
+.contents .store a.imgs span { margin-left:-26.5px; }
+.contents .reserve { width: 25%; height:400px; background: url(../images/index/reserve.jpg) center no-repeat; }
+.contents .reserve a.imgs span { margin-left:-74px; }
+.contents .tea { width: 55%; height:375px; background: url(../images/index/tea.jpg) center no-repeat; }
+.contents .tea a.imgs span { margin-left:-17px; }
+.contents .bread { width: 45%; height:375px; background: url(../images/index/bread.jpg) center no-repeat; }
+.contents .bread a.imgs span { margin-left:-29px; }
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	.contents { width: auto; padding-top: 70px; }
+	.contents .bean { width: 40%; height:310px;}
+	.contents .brew { width: 35%; height:310px;  }
+	.contents .coffee { width: 25%; height:310px; }
+	.contents .mobile { width: 20%; height:400px;  }
+	.contents .mobile span { font-size: 5.416em; color:#fff; line-height:0.89em; padding: 86px 10px 0 10px;}
+	.contents .store { width: 55%; height:400px; }
+	.contents .reserve { width: 25%; height:400px; }
+	.contents .tea { width: 55%; height:375px; }
+	.contents .bread { width: 45%; height:375px; }
+}
+
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+	.movie { height: 197px; }
+	.movie #imgBG ul {}
+	.movie #imgBG li a { display:block; transform:rotateY(0deg); transition:all .5s ease 0s }
+	.movie #imgBG li:hover a { transform:rotateY(360deg);} 
+	.contents .bean { width: 55%; height:310px; }
+	.contents .brew { width: 45%; height:310px; }
+	.contents .coffee { display:none; }
+	.contents .mobile { width: 30%; height:400px; }
+	.contents .mobile span { font-size: 6.25em; color:#fff; line-height:0.89em; padding: 68px 10px 0 10px;}
+	.contents .store { width: 70%; height:400px; }
+	.contents .reserve { width: 30%; height:375px; }
+	.contents .tea { width: 70%; height:375px; }
+	.contents .bread { display:none; }
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+	.movie #imgBG ul { top: 69.5px; }
+	.movie #imgBG li { float: none;}
+	.movie #imgBG li:first-child { margin-right: 0; margin-bottom: 10px; }
+	.roast div { margin: 118px 0 0 0; width:100%;}
+	.roast h3 { margin: 0 10px 30px 10px; }
+	.roast p { margin: 0 50px; }
+	.contents .bean { width: 50%; height:310px;}
+	.contents .brew { width: 50%; height:310px; }
+	.contents .coffee { display:none; }
+	.contents .mobile { width: 100%; height:auto;}
+	.contents .mobile span { font-size: 5.833em; padding: 10% 0;}
+	.contents .store { width: 50%; height:250px; }
+	.contents .reserve { display:none; }
+	.contents .tea { width: 50%; height:250px; }
+	.contents .bread { display:none; }
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+	.movie { width:100%; height: 372px;}
+	.movie #imgBG { background: url(../images/index/rewards2.png) center ; height:372px; 
+							background-size: cover;}
+	.movie #imgBG ul { top: 250px; left:50%; margin-left:-103.15px; }
+	.movie #imgBG li { float: left;}
+	.movie #imgBG li:first-child { margin-right: 30px; margin-bottom: 0; }
+	.movie #imgBG li a { font-size: 1.833em; }
+	.roast img { display: none; }
+	.contents .bean { width: 100%; height:350px; }
+	.contents .brew { width: 100%; height:350px; }
+	.contents .coffee { display:none;}
+	.contents .mobile { display:block; width: 100%; }
+	.contents .store { width: 100%; height:350px; }
+	.contents .reserve { display:block; width: 100%; height:350px; }
+	.contents .tea { width: 100%; height:350px; }
+	.contents .bread { display:block; width: 100%; height:350px; }
+}
+
+/* 최소 사이즈 처리 */
+@media screen and (max-width:480px) {
+	#wrap { min-width:320px; }
+	.main div:nth-of-type(1) { background:url(../images/index/title1_2.png) center 0 no-repeat; z-index:10; }		
+	.main div:nth-of-type(3) { background:url(../images/index/title2_2.png) center 0 no-repeat; z-index:30; }
+	.movie { width:100%; height: 279px;}
+	.movie #imgBG { background: url(../images/index/rewards3.png) center ; height:279px; 
+							background-size: cover;}
+	.movie #imgBG ul { top: 190px; margin-left:-87.155px;}
+	.movie #imgBG li a { font-size: 1.5em; }
+	.roast h3 { font-size: 1.916em; }
+	.roast p {  font-size: 1.5em;}
+}
+
+/*추가*/
+@media screen and (max-width:400px) {
+
+	.roast div { margin: 70px 0 0 0;}
+	.roast p { margin: 0 20px; }
+}
+

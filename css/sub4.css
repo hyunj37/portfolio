@@ -1,0 +1,88 @@
+/* 와이드 pc  */
+article {overflow:hidden; position:relative; margin-top:142px}
+article h2 { font-size:2.083em; color:#fff; margin-top: 150px; margin-bottom: 70px; 
+				width:95%; /* padding:30px; background: #111;*/ position:relative; float: right; display:none;}
+article h2:after {content:''; background:#222; height:2px; position:absolute; top:50%; width:100%}
+article .contents {width:1200px; margin: 0 auto; overflow:hidden; transition:all .6s;}
+article section h3 {margin-bottom:40px; color: #fff; font-size: 2.5em; font-weight: bold;}
+
+section {overflow: hidden; position:relative}
+section a {width:100%; height:100%;}
+section h4 {color:#fff; font-size:2.083em; font-weight: bold; margin-bottom: 40px;}
+section p {color:#fff; font-size: 1.833em; font-family: 'Oswald', sans-serif; font-weight:500}
+
+section.main_area {width:100%; height:600px; overflow:hidden; position:relative; background-attachment:fixed; background-size:cover; background-position:center -90px;; text-align: center; background-image:url(../images/sub4/rewards.jpg);background-attachment:scroll}
+section.main_area h3 {margin-top:70px;}
+section.main_area .stars li {position:absolute; top:50%; opacity:0;}
+section.main_area .stars li:nth-child(1) {left:50%}
+section.main_area.star_show .stars li:nth-child(1) {top:25%; left:25%; opacity:1; transform:rotate3d(1, 1, 0.3, 720deg); transition:all 0.5s}
+section.main_area .stars li:nth-child(2) {right:50%}
+section.main_area.star_show .stars li:nth-child(2) {top:20%; right:25%; opacity:1; transform:rotate3d(0.2, 1, 0.7, 720deg); transition:all 0.5s}
+section.main_area .stars li:nth-child(3) {left:50%}
+section.main_area.star_show .stars li:nth-child(3) {top:70%; left:20%;  opacity:1; transform:rotate3d(0.2, 0.5, 1, 720deg); transition:all 0.5s}
+section.main_area .stars li:nth-child(4) {right:50%}
+section.main_area.star_show .stars li:nth-child(4) {top:35%; right:15%; opacity:1; transform:rotate3d(1, 0.2, 0.5, 720deg); transition:all 0.5s}
+section.main_area .stars li:nth-child(5) {right:55%}
+section.main_area.star_show .stars li:nth-child(5) {top:65%; right:20%; opacity:1; transition:all 0.5s}
+section.main_area.star_show .stars li:nth-child(5):hover {transform: rotate(30deg);}
+section.main_area.star_show .stars li:nth-child(5) .about_rewards {position:absolute; top:50%; left:50%; margin-left:-15px; margin-top:-10px;}
+section.main_area.star_show .stars li:nth-child(5) .about_rewards a {color:#fff}
+section.main_area .stars li:nth-child(6) {left:50%}
+section.main_area.star_show .stars li:nth-child(6) {top:55%; left:15%;  opacity:1; transform:rotate3d(1, 0, 0, 720deg); transition:all 0.5s}
+
+section.card_area .card_box {overflow:hidden; width:100%; height:208px; margin:0 auto; position:relative}
+section.card_area .card_box:before {content:''; position:absolute; width:50px; height:208px; left:0; background: linear-gradient(to right, #000, transparent); z-index:1}
+section.card_area .card_box:after {content:''; position:absolute; width:50px; height:208px; right:0; background: linear-gradient(to left, #000, transparent); z-index:3}
+section.card_area .slide_list {position:absolute; height:208px; width:2720px/*변동*/}
+section.card_area li {float:left; margin-right:10px}
+section.card_area li a {display:block; text-indent:-999px; overflow:hidden; width:330px; height:208px}
+section.card_area li:nth-child(1) a {background:url(../images/sub4/card1.png) no-repeat;}
+section.card_area li:nth-child(2) a {background:url(../images/sub4/card2.png) no-repeat;}
+section.card_area li:nth-child(3) a {background:url(../images/sub4/card3.png) no-repeat;}
+section.card_area li:nth-child(4) a {background:url(../images/sub4/card4.png) no-repeat;}
+
+
+/* 일반 pc */
+@media screen and (max-width:1280px) {
+	article .contents { width: 100%; overflow:hidden; }
+	article .contents.card_area h3 {margin-left: 35px;}
+}
+
+/* 테블릿 */
+@media screen and (max-width:1024px) {
+	header .menu { background-color:rgba(0,0,0,0.9); }
+    article h2 {display:block}
+    article {margin-top:0}
+    article section h3 {font-size:2.083em}
+    article section.main_area h3 {margin-top:10px;}
+}
+
+/* 소형 테블릿 */
+@media screen and (max-width:768px) {
+	article h2 { margin-bottom:45px; }
+    
+    article section.card_area {margin-bottom: 50px; text-align:center}
+    article .contents.card_area h3 {margin-left: 0;}
+}
+
+/* 모바일 */
+@media screen and (max-width:640px) {
+	article section h3{ font-size:1.833em}
+    
+}
+
+/* 최소 사이즈 처리 */
+@media screen and (max-width:480px) {
+	#wrap { min-width:320px; }
+    
+    section.main_area .stars li:nth-child(1) {left:50%}
+    section.main_area.star_show .stars li:nth-child(1) {top:25%; left:20%; opacity:1; transition:all 0.5s}
+    section.main_area.star_show .stars li:nth-child(5) img {width:80px}
+}
+
+/* 추가 */
+@media screen and (max-width:360px) {
+	section h4 { font-size: 2.083em; }
+}
+
+
